@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+  font-style: normal;
+}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 211, 255, 0.8);
+  position: relative;
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+}
+.container{
+  width: 400px;
+  padding: 200px 50px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container h2{
+  color: palevioletred;
+  font-size: 46px;
+  text-shadow: 4px 4px 0 lightpink;
+}
+.container h4{
+  font-size: 20px;
+}
+input[type=number]{
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid palevioletred;
+  font-family: Pretendard ;
+}
+input[type=number]::placeholder{
+  font-size: 16px;
+  font-family: Pretendard;
+}
+input[type=number]:focus{
+  border-color: lightpink;
+  outline: white;
+}
+button{
+  border: 2px solid palevioletred;
+  padding: 10px 5px;
+  font-size: 20px;
+  color: white;
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+  border-radius: 10px;
+  background-color: lightpink;
+  cursor: pointer;
+  transition: .3s;
+}
+button:hover{
+  border-color: lightpink;
+  background-color: palevioletred;
+}
+.loading{
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+.loading i{
+  color: rebeccapurple;
+  font-size: 70px;
+  animation: loading 1.5s infinite ;
+}
+@keyframes loading {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+.answer{
+  display: none;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  background-color: palevioletred;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  color: white;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.wrong .answer{
+  font-size: 18px;
+}
+.overlay{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#info{
+  display: none;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-family: Pretendard;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
