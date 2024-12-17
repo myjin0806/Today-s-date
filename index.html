@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오늘의 날짜 맞추기</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="날짜 맞추기.css">
+</head>
+<body>
+    <div class="container">
+      <!-- 
+        <i class="fa-solid fa-spinner"></i>
+        오늘 날짜 설정
+        Date객체로 오늘의 월/일을 구해 정답으로 설정.
+        사용자 입력 받기
+        월과 일을 입력할 수 있는 필드와 "맞추기" 버튼 제공.
+        입력 값과 정답 비교
+        버튼 클릭 시, 입력한 날짜와 오늘의 날짜 비교.
+        모달 창으로 결과 표시
+        정답: "정답입니다!"
+        오답: "아쉽습니다!"와 오늘 날짜 표시.
+        모달 자동 닫기
+        2초 후 모달 닫기, 재시도 가능.
+      -->
+      <h2>오늘의 날짜 맞추기</h2>
+      <h4>오늘의 월과 일을 맞춰보세요!</h4>
+      <input type="number" placeholder="월(숫자)" id="month">
+      <input type="number" placeholder="날짜(숫자)" id="date">
+      <button onclick="todayMonthDate()">오늘의 날짜 맞추기!</button>
+    </div>
+    <!-- 모달 -->
+    <div class="overlay">
+      <!-- 로딩 -->
+      <div class="loading">
+        <i class="fa-solid fa-spinner"></i>
+      </div>
+      <!-- 정답 오답 -->
+      <div class="wrong answer">
+      </div>
+      <div class="correct answer">정답입니다!🥳</div>
+      <span id="info">이 창은 2초후에 자동으로 꺼지거나 배경을 누르면 꺼져요!</span>
+    </div>
+    <script src="날짜 맞추기.js"></script>
+</body>
+</html>
